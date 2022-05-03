@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import styles from '../../App.css';
 
 export default function CharacterList() {
   const [loading, setLoading] = useState(true);
   const [characters, setCharacters] = useState([]);
+  const location = useLocation();
+  const status = new URLSearchParams(location.search).get('status') ?? 'all';
+  const history = useHistory();
+
+  const handleStatusChange = (e) => {
+    history.push(`/?status=${e.target.value}`);
+  };
 
   useEffect(() => {
     const fetchCharacters = async () => {
@@ -23,8 +30,15 @@ export default function CharacterList() {
         <p>Loading characters...</p>
       ) : (
         <>
+          <section>
+            <select id="status" value={status} onChange={handleStatusChange}>
+              <option value="all">All</option>
+              <option value="alive">Alive</option>
+              <option value="dead">Dead</option>
+              <option value="unknown">Unknown</option>
+            </select>
+          </section>
           <div className={styles.list}>
-            <h2>Character List</h2>
             {characters.map((character) => {
               return (
                 <section key={character.id}>

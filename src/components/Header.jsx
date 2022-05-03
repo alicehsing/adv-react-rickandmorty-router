@@ -1,11 +1,12 @@
 import React from 'react';
+import styles from '../App.css';
 
 export default function Header() {
   return (
     <>
-      <header>
-        <h1>Wubba Lubba Dub Dub!</h1>
-        <p>Rick and Morty Character Wiki</p>
+      <header className={styles.header}>
+        <h1>Rick and Morty Character Wiki</h1>
+        <hr />
       </header>
     </>
   );

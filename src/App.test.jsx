@@ -20,11 +20,11 @@ describe('<App />', () => {
     screen.getByText(/loading/i);
     await waitForElementToBeRemoved(await screen.findByText(/loading/i));
 
-    // Find and check for clickable rendered character 'Morty Smith'
-    const characterLink = await screen.findByText('Morty Smith');
+    // Find and check for clickable rendered character 'Rick Sanchez'
+    const characterLink = await screen.findByText('Rick Sanchez');
     userEvent.click(characterLink);
 
-    // on click, find and check for image of Morty Smith rendered on detail page
-    await screen.findByAltText('Morty Smith');
+    // on click, find and check for image of Rick Sanchez rendered on detail page
+    await screen.findByAltText('Rick Sanchez');
   });
 });

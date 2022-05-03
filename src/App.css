@@ -20,7 +20,7 @@ header {
 
 .list {
   background-color: rgb(238, 248, 243);
-  width: 2560px;
+  width: 1080px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,4 +57,13 @@ a:link {
 
 .detail img {
   border-radius: 20px;
+}
+
+.header h1 {
+  font-size: 60px;
+  font-weight: 600;
+  background-image: linear-gradient(to top, #121213, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
