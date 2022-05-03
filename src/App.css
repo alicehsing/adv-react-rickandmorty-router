@@ -43,3 +43,18 @@ a:link {
 .list h3 {
   color: rgb(192, 174, 101);
 }
+
+.detail {
+  background-color: rgb(97, 105, 101);
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(238, 248, 243);
+  border-radius: 20px;
+}
+
+.detail img {
+  border-radius: 20px;
+}

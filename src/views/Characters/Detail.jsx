@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import styles from '../../App.css';
 
 export default function CharacterDetail() {
   const [character, setCharacter] = useState({});
@@ -25,14 +26,16 @@ export default function CharacterDetail() {
         <p>Loading character...</p>
       ) : (
         <>
-          <section>
-            <h2>{character.name}</h2>
-            <span>Species: {character.species}</span>
-            <p>Status: {character.status}</p>
-            <p>Location: {character.location.name}</p>
-            <p>Gender: {character.gender}</p>
-            <img alt={`${character.name}`} src={character.image} />
-          </section>
+          <div className={styles.detail}>
+            <section>
+              <h2>{character.name}</h2>
+              <span>Species: {character.species}</span>
+              <p>Status: {character.status}</p>
+              <p>Location: {character.location.name}</p>
+              <p>Gender: {character.gender}</p>
+              <img alt={`${character.name}`} src={character.image} />
+            </section>
+          </div>
         </>
       )}
     </>
