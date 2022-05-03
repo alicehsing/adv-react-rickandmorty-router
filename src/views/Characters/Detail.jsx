@@ -22,7 +22,13 @@ export default function CharacterDetail() {
 
   return (
     <>
-      <Link to="/">Back to list of characters</Link>
+      <Link to="/">
+        <input
+          type="button"
+          value="Back to list of characters"
+          className={styles.back}
+        />
+      </Link>
       <hr />
       {loading ? (
         <p>Loading character...</p>

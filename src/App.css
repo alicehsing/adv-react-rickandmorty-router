@@ -8,6 +8,8 @@ body,
   width: 100%;
   display: flex;
   justify-content: space-around;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -66,4 +68,10 @@ a:link {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+}
+
+.back {
+  background-color: #140b1c;
+  margin-top: 40px;
+  color: rgb(224, 229, 232);
 }

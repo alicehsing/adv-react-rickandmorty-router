@@ -43,12 +43,15 @@ export default function CharacterList() {
       ) : (
         <>
           <section>
-            <select id="status" value={status} onChange={handleStatusChange}>
-              <option value="all">All</option>
-              <option value="alive">Alive</option>
-              <option value="dead">Dead</option>
-              <option value="unknown">Unknown</option>
-            </select>
+            <div>
+              <h3>Sort characters by status: </h3>
+              <select id="status" value={status} onChange={handleStatusChange}>
+                <option value="all">All</option>
+                <option value="alive">Alive</option>
+                <option value="dead">Dead</option>
+                <option value="unknown">Unknown</option>
+              </select>
+            </div>
           </section>
           <div className={styles.list}>
             {characters.map((character) => {
