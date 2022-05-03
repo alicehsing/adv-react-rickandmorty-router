@@ -1,0 +1,45 @@
+html,
+body,
+#root,
+.App {
+  background-color: rgb(238, 248, 243);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+header {
+  background-color: rgb(238, 248, 243);
+  background-image: ;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.list {
+  background-color: rgb(238, 248, 243);
+  width: 2560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.list section {
+  background-color: rgb(10, 10, 10);
+  color: azure;
+  width: auto;
+  text-decoration: none;
+  border-style: ridge;
+  margin-bottom: 20px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.list h3 {
+  color: rgb(192, 174, 101);
+}
