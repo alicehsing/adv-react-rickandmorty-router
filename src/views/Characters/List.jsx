@@ -34,7 +34,6 @@ export default function CharacterList() {
                   </Link>
                   <span>Species: {character.species}</span>
                   <p>Status: {character.status}</p>
-                  <p>Location: {character.location.name}</p>
                 </section>
               );
             })}
