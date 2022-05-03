@@ -12,7 +12,7 @@ describe('<App />', () => {
     // Render the app to the "screen"
     render(
       //initialEntries
-      <MemoryRouter initialEntries={['/']}>
+      <MemoryRouter initialEntries={['/']} initialIndex={1}>
         <App />
       </MemoryRouter>
     );
