@@ -11,7 +11,6 @@ export default function CharacterList() {
       setLoading(true);
       const res = await fetch('https://rickandmortyapi.com/api/character');
       const { results } = await res.json();
-      console.log(results);
       setCharacters(results);
       setLoading(false);
     };
