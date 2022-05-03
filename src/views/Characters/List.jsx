@@ -16,13 +16,25 @@ export default function CharacterList() {
   useEffect(() => {
     const fetchCharacters = async () => {
       setLoading(true);
-      const res = await fetch('https://rickandmortyapi.com/api/character');
+      const statusParam = new URLSearchParams(location.search).get('status');
+
+      const url =
+        // || means 'or'
+        // Condition 1: if statusParam === 'all' and !statusParam (is statusParam blank?) is falsey (not blank) => 'https://rickandmortyapi.com/api/character'
+        // Condition 2: if statusParam !== 'all' and !statusParam is falsey (not blank) => https://rickandmortyapi.com/api/character?status=${statusParam}`;
+        // Condition 3: if statusParam !== 'all' and !statusParam is truthy (is blank) => https://rickandmortyapi.com/api/character'
+        // COndition 4: if statusParam === 'all, and !statusParam  is truthy (is blank) => 'https://rickandmortyapi.com/api/character'
+        statusParam === 'all' || !statusParam
+          ? 'https://rickandmortyapi.com/api/character'
+          : `https://rickandmortyapi.com/api/character?status=${statusParam}`;
+      const res = await fetch(url);
+      // const res = await fetch('https://rickandmortyapi.com/api/character');
       const { results } = await res.json();
       setCharacters(results);
       setLoading(false);
     };
     fetchCharacters();
-  }, []);
+  }, [location.search]);
 
   return (
     <>
