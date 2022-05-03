@@ -22,6 +22,8 @@ export default function CharacterDetail() {
 
   return (
     <>
+      <Link to="/">Back to list of characters</Link>
+      <hr />
       {loading ? (
         <p>Loading character...</p>
       ) : (
